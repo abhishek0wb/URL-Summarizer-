@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: URL-Summarizer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free  # Change this to 'starter' or 'pro' if you're using a paid plan
